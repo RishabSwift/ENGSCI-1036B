@@ -17,10 +17,12 @@ public class rbhatt23_lab02_q3 {
         System.out.println("******************************************************");
         System.out.println();
 
+        // Initialize the variables
         Scanner scan = new Scanner(System.in);
         double firstNum, secondNum, result = 0;
         int choice;
 
+        // Get the first and second numbers
         System.out.println("Please enter the first number:");
         firstNum = scan.nextDouble();
 
@@ -35,9 +37,13 @@ public class rbhatt23_lab02_q3 {
         System.out.println("5. Modulo");
         System.out.println("6. Five Year Loan: Monthly Payment");
 
+        // Store their choice in a variable
         choice = scan.nextInt();
+
+        // Boolean variable required to hide the result if error
         boolean success = true;
 
+        // Switch case for the choices and doing proper actions based on the choice
         switch (choice) {
             case 1:
                 result = firstNum + secondNum;
@@ -63,6 +69,7 @@ public class rbhatt23_lab02_q3 {
                 break;
         }
 
+        // Only show the result if they entered a valid choice
         if (success) {
             System.out.println("\nThe result is " + result);
         }
