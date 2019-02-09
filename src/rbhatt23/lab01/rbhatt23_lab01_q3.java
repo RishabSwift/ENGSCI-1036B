@@ -16,16 +16,20 @@ public class rbhatt23_lab01_q3 {
         System.out.println();
 
         System.out.println("Please enter the current year:");
-
+        // Get year from user
         Scanner scan = new Scanner(System.in);
         String year = scan.next();
 
+        // Set them as string so first, second, third and last character can be received from user
         String millenniums, centuries, decades, singleYears;
+
+        // By using substring, digits can be easily extracted from string
         millenniums = year.substring(0, 1);
         centuries = year.substring(1, 2);
         decades = year.substring(2, 3);
         singleYears = year.substring(3);
 
+        // Parse and output to user
         System.out.printf("The current year is composed of %s millennium(s), %s centuries, %s decade(s), and %s single year(s).", millenniums, centuries, decades, singleYears);
     }
 }
