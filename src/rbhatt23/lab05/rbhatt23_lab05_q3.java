@@ -131,6 +131,7 @@ public class rbhatt23_lab05_q3 {
 
     /**
      * Generate 2 random numbers to ask in the question depending on the range and such
+     *
      * @return array of random numbers
      */
     private static int[] generateNumbersForQuestion() {
@@ -143,52 +144,53 @@ public class rbhatt23_lab05_q3 {
     private static void displayQuestion() {
         displayQuestion(operators[randomInt(0, 2)]);
     }
+
     /**
      * Ask the questions with operators
      */
     private static void displayQuestion(char selectedOperator) {
 
-            // Get the beginning time
-            long startTime = System.currentTimeMillis();
+        // Get the beginning time
+        long startTime = System.currentTimeMillis();
 
-            // Generate two numbers to ask for the question
-            int[] numbers = generateNumbersForQuestion();
-            int firstNumber = numbers[0];
-            int secondNumber = numbers[1];
-            int answer = 0;
+        // Generate two numbers to ask for the question
+        int[] numbers = generateNumbersForQuestion();
+        int firstNumber = numbers[0];
+        int secondNumber = numbers[1];
+        int answer = 0;
 
 
-            System.out.printf("What is the result of %d %s %d?\n", firstNumber, selectedOperator, secondNumber);
+        System.out.printf("What is the result of %d %s %d?\n", firstNumber, selectedOperator, secondNumber);
 
-            // Calculate the answer to check if what they typed is correct
-            switch (selectedOperator) {
-                case '+':
-                    answer = firstNumber + secondNumber;
-                    break;
-                case '-':
-                    answer = firstNumber - secondNumber;
-                    break;
-                case '*':
-                    answer = firstNumber * secondNumber;
-                    break;
-                default:
-                    break;
-            }
+        // Calculate the answer to check if what they typed is correct
+        switch (selectedOperator) {
+            case '+':
+                answer = firstNumber + secondNumber;
+                break;
+            case '-':
+                answer = firstNumber - secondNumber;
+                break;
+            case '*':
+                answer = firstNumber * secondNumber;
+                break;
+            default:
+                break;
+        }
 
-            // Get user answer
-            userInput = scan.nextInt();
+        // Get user answer
+        userInput = scan.nextInt();
 
-            // Check their answer
-            if (answer == userInput) {
-                System.out.println("Correct!\n");
-                totalCorrect++;
-            } else {
-                System.out.println("Incorrect! The correct answer is " + answer + "\n");
-            }
+        // Check their answer
+        if (answer == userInput) {
+            System.out.println("Correct!\n");
+            totalCorrect++;
+        } else {
+            System.out.println("Incorrect! The correct answer is " + answer + "\n");
+        }
 
-            // Get current time and subtract it from the start time and add it to the array
-            // The array has all the times taken for each questions so we can easily calculate the average after
-           getTimes.add(System.currentTimeMillis() - startTime);
+        // Get current time and subtract it from the start time and add it to the array
+        // The array has all the times taken for each questions so we can easily calculate the average after
+        getTimes.add(System.currentTimeMillis() - startTime);
     }
 
     /**
@@ -230,11 +232,12 @@ public class rbhatt23_lab05_q3 {
 
     /**
      * Print the header
-     * @param labNum lab number
+     *
+     * @param labNum      lab number
      * @param questionNum question number
-     * @param fName first name
-     * @param lName last name
-     * @param mission mission
+     * @param fName       first name
+     * @param lName       last name
+     * @param mission     mission
      */
     private static void printHeader(int labNum, int questionNum, String fName, String lName, String mission) {
 

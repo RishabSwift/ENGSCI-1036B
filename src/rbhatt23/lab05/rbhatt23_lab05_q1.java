@@ -12,11 +12,12 @@ public class rbhatt23_lab05_q1 {
 
     /**
      * Print the header
-     * @param labNum lab number
+     *
+     * @param labNum      lab number
      * @param questionNum question number
-     * @param fName first name
-     * @param lName last name
-     * @param mission mission
+     * @param fName       first name
+     * @param lName       last name
+     * @param mission     mission
      */
     private static void printHeader(int labNum, int questionNum, String fName, String lName, String mission) {
 

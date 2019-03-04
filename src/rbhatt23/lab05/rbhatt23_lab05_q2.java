@@ -22,7 +22,8 @@ public class rbhatt23_lab05_q2 {
 
     /**
      * Compute the power
-     * @param base base #
+     *
+     * @param base  base #
      * @param power power #
      * @return answer
      */
