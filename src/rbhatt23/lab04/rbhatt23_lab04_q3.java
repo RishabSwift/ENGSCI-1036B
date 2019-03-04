@@ -13,7 +13,6 @@ public class rbhatt23_lab04_q3 {
 
     public static void main(String[] args) {
 
-        System.out.println(getTimes.length);
         System.out.println("Welcome to the math practice program!");
 
         // Run this loop until the user exits
