@@ -15,24 +15,31 @@ public class rbhatt23_lab04_q2 {
         int size = scan.nextInt();
 
         // Do Repetitions
-        System.out.println("Please enter the number of repetitions (0 to exit):");
-        int repetitions = scan.nextInt();
+        while (true) {
+            System.out.println("\nPlease enter the number of repetitions (0 to exit):");
+            int repetitions = scan.nextInt();
 
-        for (int i = 1; i <= size; i++) {
-            // Start another loop because we wanna add another parallelogram for every repetition
-            for (int j = 0; j < repetitions; j++) {
-                printSingleLine(size, i);
-                // Keeps track weather the FIRST parallelogram is complete because we need the initial empty white space
-                if (j == 0) {
-                    firstCompleted = true;
-                }
-                // Print 3 white spaces before the next parallelogram is printed
-                System.out.print("   ");
+            if (repetitions == 0) {
+                break;
             }
+            for (int i = 1; i <= size; i++) {
+                // Start another loop because we wanna add another parallelogram for every repetition
+                for (int j = 0; j < repetitions; j++) {
+                    printSingleLine(size, i);
+                    // Keeps track weather the FIRST parallelogram is complete because we need the initial empty white space
+                    if (j == 0) {
+                        firstCompleted = true;
+                    }
+                    // Print 3 white spaces before the next parallelogram is printed
+                    System.out.print("   ");
+                }
                 firstCompleted = false;
-            // New line for the next row of #'s
-            System.out.println();
+                // New line for the next row of #'s
+                System.out.println();
+            }
         }
+
+        System.out.println("Goodbye!");
     }
 
 
