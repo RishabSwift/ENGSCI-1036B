@@ -34,11 +34,34 @@ public class rbhatt23_lab07_q1 {
     }
 
     /**
-     * Sort the array using bubble sort
-     *
+     * Sort the array by its length
      * @param array String array
      */
     private static void sortLength(String[] array) {
+        // Loop through the array to keep track of passes
+        for (int i = 0; i < array.length; i++) {
+            // Loop through the same array
+            for (int j = 1; j <= array.length - 1; j++) {
+                // Keep comparing using the array lengths
+                if (array[j].length() < array[j - 1].length()) {
+                    // And swap...
+                    // Set a temporary variable and set its value to the first index
+                    String temp = array[j];
+                    // Swap the values
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
+            }
+        }
+    }
+
+    /**
+     * Sort the array using bubble sort
+     * #### THIS ONE SORTS ALPHABETICALLY
+     *
+     * @param array String array
+     */
+    private static void sortAlphabetically(String[] array) {
         // Loop through the array to keep track of passes
         for (int i = 0; i < array.length; i++) {
             // Loop through the same array
